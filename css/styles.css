@@ -2,6 +2,11 @@ section {
     padding: 1rem;
 }
 
+h3 {
+    font-size: 48px;
+    color: #fff;
+}
+
 p {
     margin-bottom: 1.5rem;
 }
@@ -10,8 +15,15 @@ p {
     display: flex;
     align-items: center;
     overflow: scroll;
+    /* this hides the scrollbar in FireFox */
     scrollbar-width: none;
     height: 237.7px;
+}
+
+.horizontal-content::-webkit-scrollbar {
+    /* this hides the scrollbar in Chrome*/
+    background: transparent;
+    width: 0;
 }
 
 .horizontal-content > div {
@@ -26,4 +38,15 @@ p {
 .horizontal-content > div:active {
     flex: 0 0 346.5px;
     height: 205.7px;
+}
+
+.parallax-image {
+    background-image: url('../img/movie.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    padding: 500px 20px;
+    background-attachment: fixed;
+    /* background attachement gets disabled on mobile due to performance */
 }
